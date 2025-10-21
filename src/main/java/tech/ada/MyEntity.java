@@ -1,6 +1,6 @@
 package tech.ada;
 
-    
+
 
 /**
  * Example JPA entity defined as a Panache Entity.
