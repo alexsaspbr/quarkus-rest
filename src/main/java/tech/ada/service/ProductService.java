@@ -29,4 +29,7 @@ public class ProductService {
         return this.productRepository.save(product);
     }
 
+    public String delete(Long sku) {
+        return this.productRepository.remove(sku);
+    }
 }

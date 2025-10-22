@@ -1,9 +1,6 @@
 package tech.ada.controller;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import tech.ada.model.Product;
@@ -39,6 +36,11 @@ public class ProductResource {
         return Response.ok(this.productService.create(product)).build();
     }
 
-    //DELETE
+    @DELETE
+    @Path("/{sku}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response delete(Long sku) {
+        return Response.ok(this.productService.delete(sku)).build();
+    }
 
 }
